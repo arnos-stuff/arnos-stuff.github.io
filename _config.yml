@@ -6,24 +6,23 @@ language: 'en-uk'
 words_per_minute: 200
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /jasper2/
+baseurl: /welcome/
 
 # Website info
-title: Ghost
-description: The professional publishing platform
-cover: assets/images/blog-cover.jpg
-logo: assets/images/blog-icon.png
-logo_dark: assets/images/favicon.png
-favicon: assets/images/favicon.png
-CNAME: #add cname for website to be created
+title: Arno's Stuff
+description: Collection of things I think are interesting
+cover: assets/images/pexels-ryutaro-tsukata-6249250.jpg
+logo: assets/images/arno-globe-logo-circle.png
+logo_dark: assets/images/arno-globe-logo-circle.png
+favicon: assets/images/arno-globe-logo-circle.png
+CNAME: arnov.eu
 
 # Social info
 navigation: True # show the navbar links
 subscribers: True # you need to connect an external service for this to work,
 # if 'True' the submit button is disabled for now, but you can change that
 # by editing `_includes/subscribe-form.html`
-twitter: tryghost # replace by your username
-facebook: ghost # replace by your username
+twitter: varn0v # replace by your username
 
 # Disqus
 disqus: False
