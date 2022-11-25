@@ -12,10 +12,10 @@ url: https://arnos-stuff.github.io
 # Website info
 title: Arno's Stuff
 description: Collection of things I think are interesting
-cover: assets/images/pexels-ryutaro-tsukata-6249250.jpg
-logo: assets/images/arno-globe-logo-circle.png
-logo_dark: assets/images/arno-globe-logo-circle.png
-favicon: assets/images/arno-globe-logo-circle.png
+cover: /assets/images/pexels-ryutaro-tsukata-6249250.jpg
+logo: /assets/images/arno-globe-logo-circle.png
+logo_dark: /assets/images/arno-globe-logo-circle.png
+favicon: /assets/images/arno-globe-logo-circle.png
 CNAME: arnov.eu
 
 # Social info
