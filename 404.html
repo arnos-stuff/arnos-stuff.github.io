@@ -17,8 +17,8 @@ It's a good idea to keep this template as minimal as possible in terms of both f
     <title>{{ page.title }}</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/built/screen.css" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/screen.edited.css" />
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     {% include head.html %}
 </head>
@@ -29,7 +29,7 @@ It's a good idea to keep this template as minimal as possible in terms of both f
             <div class="inner">
                 <nav class="site-nav-center">
                     {% if site.logo %}
-                        <a class="site-nav-logo" href="{{ site.baseurl }}"><img src="{{site.baseurl}}{{ site.logo }}" alt="{{ site.title }}" /></a>
+                        <a class="site-nav-logo" href="{{ site.baseurl }}"><img src="{{site.baseurl }}{{ site.logo }}" alt="{{ site.title }}" /></a>
                     {% else %}
                         <a class="site-nav-logo" href="{{ site.baseurl }}">{{ site.title }}</a>
                     {% endif %}
