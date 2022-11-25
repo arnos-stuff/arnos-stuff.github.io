@@ -37,17 +37,17 @@ gulp.task('css', function () {
         cssnano()
     ];
 
-    return gulp.src('assets/css/*.css')
+    return gulp.src('/assets/css/*.css')
         .on('error', swallowError)
         .pipe(sourcemaps.init())
         .pipe(postcss(processors))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('assets/built/'))
+        .pipe(gulp.dest('/assets/built/'))
         .pipe(livereload());
 });
 
 gulp.task('watch', function () {
-    gulp.watch('assets/css/**', ['css']);
+    gulp.watch('/assets/css/**', ['css']);
 });
 
 gulp.task('zip', ['css'], function() {

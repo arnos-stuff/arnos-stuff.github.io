@@ -6,7 +6,7 @@ language: 'en-uk'
 words_per_minute: 200
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /arnos-stuff.github.io
+baseurl: /arnos-stuff
 url: https://arnos-stuff.github.io
 
 # Website info
@@ -73,7 +73,6 @@ branch: master
 destination: _site
 
 exclude:
-  - assets/css
   - node_modules
   - vendor
   - .travis.yml

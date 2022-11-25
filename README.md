@@ -84,7 +84,7 @@ $ npm install
 $ gulp
 ```
 
-Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
+Now you can edit `//assets/css/` files, which will be compiled to `/assets/built/` automatically.
 
 ## Issues and Contributing
 
