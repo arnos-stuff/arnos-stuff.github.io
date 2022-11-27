@@ -16,3 +16,10 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'OutBack-Stretch-Thin';
+    src: url('OutBack-Stretch-Thin.ttf');
+    font-weight: normal;
+    font-style: normal;
+}

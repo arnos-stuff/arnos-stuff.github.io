@@ -324,7 +324,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     background-color: #2e3d69;
     display: block;
     text-transform: lowercase;
-    font-family: 'OutBack-Stretch', sans-serif;
+    font-family: 'OutBack-Stretch-Thin', sans-serif;
     font-size: initial;
     color: #FF914D;
 }
