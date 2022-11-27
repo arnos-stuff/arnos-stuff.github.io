@@ -242,13 +242,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    .site-title {
-        font-size: 100%;
-    }
-    .site-description {
-        font-size: 100%;
-    }
-
+    
     .t-wrapper {
         grid-template-areas:
             "one"
@@ -439,6 +433,11 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     }
     .site-nav-right {
         display: none;
+    }
+    .nav {
+        display: flow-root;
+        margin: inherit;
+        padding: inherit;
     }
 }
 

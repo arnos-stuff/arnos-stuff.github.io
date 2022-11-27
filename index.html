@@ -67,7 +67,13 @@ into the {body} of the default.hbs template -->
                                                     z-index: 5; 
                                                     line-height: initial;
                                                 }
-
+                                                
+                                                
+                                                @media (max-width: 768px) {
+                                                    div.wd-{{ row_nb }} {
+                                                        font-size: 80%;
+                                                    }
+                                                }
                                                 /* --fm-Asc: 0.833
                                                 --fm-Desc: -0.155
                                                 --fm-LineGap: 0
