@@ -269,6 +269,7 @@ body {
     align-items: flex-start;
     font-size: 5.2rem;
     max-height: 100%;
+    row-gap: 10px;
     width: auto;
 }
 
@@ -280,7 +281,6 @@ body {
     padding-bottom: 1%;
     font-family: 'OutBack-Stretch', sans-serif;
     font-size: xx-large;
-    color: #000;
 }
 
 /* Site Nav Hack Explanation (above):
@@ -321,10 +321,12 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .nav li {
+    background-color: #2e3d69;
     display: block;
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
+    text-transform: lowercase;
+    font-family: 'OutBack-Stretch', sans-serif;
+    font-size: initial;
+    color: #FF914D;
 }
 
 .nav li a {
