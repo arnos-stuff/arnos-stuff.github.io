@@ -243,10 +243,10 @@ body {
 
 @media (max-width: 768px) {
     .site-title {
-        font-size: 3rem;
+        font-size: 100%;
     }
     .site-description {
-        font-size: 1.8rem;
+        font-size: 100%;
     }
 
     .t-wrapper {
