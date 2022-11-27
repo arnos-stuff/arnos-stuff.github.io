@@ -241,12 +241,25 @@ body {
     --cptFontSize: (var(--x-height))
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 768px) {
     .site-title {
         font-size: 3rem;
     }
     .site-description {
         font-size: 1.8rem;
+    }
+
+    .t-wrapper {
+        grid-template-areas:
+            "one"
+            "one"
+            "one"
+            "."
+            "."
+            "two"
+            "two"
+            "two"
+            "two";
     }
 }
 
