@@ -5,7 +5,7 @@ arno:
   url_full: https://www.youtube.com/watch?v=dQw4w9WgXcQ
   url: arnov.eu
   bio: I'm just a silly lil' guy :)
-  picture: assets/images/picrew-pfp.jpg
+  picture: /assets/images/picrew-pfp.png
   facebook: False
   twitter: varn0v
-  cover: assets/images/arno-collage.jpg
+  cover: /assets/images/arno-collage.jpg

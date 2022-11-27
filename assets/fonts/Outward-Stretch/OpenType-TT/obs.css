@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'OutBack-Stretch';
+    src: url('OutBack-Stretch-Base.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OutBack-Stretch-Shadow';
+    src: url('OutBack-Stretch-Shadow.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OutBack-Stretch-Smooth';
+    src: url('OutBack-Stretch-Smooth.ttf');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -11,29 +11,99 @@ into the {body} of the default.hbs template -->
 
 <!-- The big featured header, it uses blog cover image as a BG if available -->
 <header class="site-header outer {% if page.cover or site.cover %}" style="background-image:  url({{ site.baseurl }}{% if page.cover %}{{ page.cover }}{% elsif site.cover %}{{ site.cover }}{% endif %}) {% else %}no-cover{% endif %}">
+    
+    
     <div class="inner">
-        <div class="site-header-content">
-            <h1 class="site-title">
-                {% if site.logo %}
-                    <img class="site-logo" src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title }}"/>
-                {% else %}
-                    {{ site.title }}
-                {% endif %}
-            </h1>
-            <h2 class="site-description">{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}</h2>
+        <div class="h-wrapper">
+            <div class="h-one">
+                <div class="site-header-content">
+                    {% if page.description %}
+                    <h2 class="site-description">
+                        {{ page.description }}
+                    </h2>
+                    {%else %}
+                        {% if site.logo %}
+                            <div class="t-wrapper">
+                                <div class="t-one"> 
+                                    <img class="site-logo" src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title }}" />
+                                </div>
+                                <div class="t-two" style="display: contents;">
+                                    <!-- <h2 class="site-description">{{ site.description }}</h2> -->
+                                    {% assign dlen = site.description.size %}
+                                    {% assign words = site.description | split: ' ' %}
+                                    {% assign nb_words = words.size %}
+                                    {% assign maxlen = 0 %}
+                                    {% for wd in words %}
+                                        {%if wd.size > maxlen %}
+                                            {% assign maxlen = wd.size %}
+                                        {% endif %}
+                                    {% endfor %}
+                                    <style>
+                                        .words {
+                                                display: grid;
+                                                grid-template-columns: {{ maxlen }}fr;
+                                                grid-template-rows: {{ nb_words }}fr;
+                                                flex-direction: column;
+                                                justify-content: center;
+                                                align-items: center;
+                                                padding: 0%;
+                                                margin: 0%;
+                                                height: 100%;
+                                            }
+                                    </style>
+                                    <div class="site-description words">
+                                        {% assign row_nb = 1 %}
+                                        {% for wd in words %}
+                                        
+                                            <style>
+                                                div.wd-{{ row_nb }} {
+                                                    grid-row: {{ row_nb }};
+                                                    grid-column: 1 / -1;
+                                                    justify-self: center;
+                                                    align-self: center;
+                                                    background-image: url("{{site.baseurl}}/assets/images/waves/stacked-waves-haikei-({{ row_nb | plus: -1 }}).png");
+                                                    background-size: 100% 100%;
+                                                    background-position: 80% -15.5%;
+                                                    z-index: 5; 
+                                                    line-height: initial;
+                                                }
+
+                                                /* --fm-Asc: 0.833
+                                                --fm-Desc: -0.155
+                                                --fm-LineGap: 0
+                                                --fm-Top: 0.833
+                                                --fm-Bbox-Top: 0.913
+                                                --fm-Bbox-Bottom: -0.156
+                                                --cptFontSize: (var(--x-height)) */
+
+                                            </style>
+                                            <div class="wd-{{ row_nb }}">{{ wd }}</div>
+                                            {% assign row_nb = row_nb | plus: 1 %}
+                                        {% endfor %}
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% else %}
+                            <h1 class="site-description"> {{ site.title }} </h1>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+            <div class="h-two">
+                {% include site-nav.html %} 
+            </div>
         </div>
-        {% include site-nav.html %}
+    </div>
     </div>
 </header>
 
 <!-- The main content area -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
-
         <div class="post-feed">
             <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
-            {%  include post-card.html %}
+            {% include post-card.html %}
         </div>
-
     </div>
 </main>

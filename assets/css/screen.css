@@ -27,6 +27,7 @@ production stylesheet in assets/built/screen.css
 /* 1. Global - Set up the things
 /* ---------------------------------------------------------- */
 @import "global.css";
+@import "../fonts/Outward-Stretch/OpenType-TT/obs.css";
 
 body {
     background: #f4f8fb;
@@ -145,15 +146,67 @@ body {
 }
 
 .site-header-content {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 10vw 4vw;
+    padding: 5% 0;
     min-height: 200px;
-    max-height: 450px;
+    max-height: 600px;
     text-align: center;
 }
+
+.t-wrapper {
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    grid-template-areas:
+        "one one one . . two two two two";
+}
+
+.t-one {
+    grid-column: 1 / 5;
+    grid-row: 1;
+    justify-items: center;
+    height: fit-content;
+    grid-area: one;
+  }
+.t-two {
+    grid-column: 5 / -1;
+    grid-row: 1;
+    text-align: justify;
+    text-transform: lowercase;
+    grid-area: two;
+  }
+
+  .skip::after {
+    content: "\a";
+    display: none;
+  }
+  .letters {
+    background-color: #a80000;
+    display: inline-block;
+    padding: 0% 0% 0% 0%;
+  }
+  .h-wrapper {
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(8, 1fr);
+    align-items: center;
+    padding: 0%;
+}
+
+.h-one {
+    grid-column: 1;
+    grid-row: 1 / 7;
+    justify-items: left;
+  }
+.h-two {
+    grid-column: 1;
+    grid-row: 7 / -1;
+    text-align: justify;
+    text-transform: lowercase;
+  }
 
 .site-title {
     z-index: 10;
@@ -161,23 +214,34 @@ body {
     padding: 0;
     font-size: 5.8rem;
     font-weight: 1700;
-}
-
+}  
+  
 .site-logo {
-    max-height: 250px;
+    max-width: auto;
+    height: -webkit-fill-available;
 }
 
 .site-description {
     z-index: 10;
     margin: 0;
     padding: 5px 0;
-    font-size: 5.2rem;
-    font-weight: 500;
-    letter-spacing: 0.4px;
+    font-family: 'OutBack-Stretch-Shadow', sans-serif;
+    font-size: 16rem;
+    font-weight: 400;
+    letter-spacing: 2.5px;
     opacity: 1.5;
+    color: #2e3d69;
+    -webkit-text-stroke: 4px black;
+    --fm-Asc: 0.833
+    --fm-Desc: -0.155
+    --fm-LineGap: 0
+    --fm-Top: 0.833
+    --fm-Bbox-Top: 0.913
+    --fm-Bbox-Bottom: -0.156
+    --cptFontSize: (var(--x-height))
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1500px) {
     .site-title {
         font-size: 3rem;
     }
@@ -196,23 +260,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    overflow-y: hidden;
-    height: 40px;
-    font-size: 1.2rem;
+    font-size: 5.2rem;
+    max-height: 100%;
+    width: auto;
 }
 
 .site-nav-left {
     display: flex;
     align-items: center;
-    overflow-x: auto;
-    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     margin-right: 10px;
-    padding-bottom: 80px;
-    letter-spacing: 0.4px;
-    white-space: nowrap;
-
-    -ms-overflow-scrolling: touch;
+    padding-bottom: 1%;
+    font-family: 'OutBack-Stretch', sans-serif;
+    font-size: xx-large;
+    color: #000;
 }
 
 /* Site Nav Hack Explanation (above):
@@ -228,7 +289,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     display: block;
     margin-right: 24px;
     padding: 11px 0;
-    color: #fff;
     font-size: 1.7rem;
     line-height: 1em;
     font-weight: bold;
@@ -243,6 +303,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     display: block;
     width: auto;
     height: 21px;
+    color: #fff;
 }
 
 .nav {
@@ -263,13 +324,13 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     display: block;
     margin: 0;
     padding: 10px 12px;
-    color: #fff;
     opacity: 0.8;
 }
 
 .nav li a:hover {
     text-decoration: none;
     opacity: 1;
+    text-decoration: underline;
 }
 
 .site-nav-right {
@@ -1926,3 +1987,6 @@ Usage (In Ghost editor):
         margin-left: 0;
     }
 }
+
+
+/* random stuff for grid layout */

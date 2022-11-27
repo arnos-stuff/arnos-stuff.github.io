@@ -11,11 +11,11 @@ url: https://arnos-stuff.github.io
 
 # Website info
 title: Arno's Stuff
-description: Collection of things I think are interesting
-cover: /assets/images/pexels-ryutaro-tsukata-6249250.jpg
-logo: /assets/images/arno-globe-logo-circle.png
-logo_dark: /assets/images/arno-globe-logo-circle.png
-favicon: /assets/images/arno-globe-logo-circle.png
+description: Arno's Stuff!
+cover: /assets/images/pexels-pixabay-163726.jpg
+logo: /assets/images/logo.gif
+logo_dark: /assets/images/arno-logo-circle-black-lightorange.png
+favicon: /assets/images/arno-logo-circle-darkred-lightorange-bg.png
 CNAME: arnov.eu
 
 # Social info
@@ -33,10 +33,7 @@ disqus_shortname: jekyllt # replace with your disqus username
 google_analytics: UA-69281367-1 # replace with your GA tracking identifier
 
 # Permalinks
-permalink: /:title
-# permalink: /author/:author
-# permalink: /tag/:tag
-
+permalink: /:categories/:year/:month/:title:output_ext
 # Authors' info in `_data/authors.yml`
 # Tags' info in `_data/tags_info.yml`
 
